@@ -7,12 +7,21 @@
 int getop(char []);
 void push(double);
 double pop(void);
+void print_element(void);
+void duplicate_element(void);
+void swap_elements(void);
+void clear_stack(void);
 
 /* Exercise 4-3: Add the modulus (%) operator and provisions for negative
 	numbers
 
 	TODO: Known issue where input ending on unary minus '-' erroneously
 	returns 0.
+ */
+
+/* Exercise 4-4: Add commands to print the top element of the stack without
+	popping, to duplicate it, and to swap the top two elements. Add a
+	command to clear the stack.
  */
 
 /* reverse Polish calculator */
@@ -132,6 +141,43 @@ double pop(void)
                 printf("error: stack empty\n");
                 return 0.0;
         }
+}
+
+/* print top element of the stack to stdout */
+void print_element(void)
+{
+	if (sp > 0)
+		printf("%f\n", val[sp]);
+	else {
+		printf("error: stack empty\n");
+	}
+}
+
+/* take top element of stack and duplicate it, pushing it onto stack */
+void duplicate_element(void)
+{
+	if (sp < MAXVAL && sp > 0)
+		val[sp++] = val[sp];
+	else if (sp >= MAXVAL)
+		printf("error: stack full can't push %g\n", val[sp]);
+	else if (sp == 0)
+		printf("error: stack empty\n");
+}
+
+/* swap top two elements of the stack */
+void swap_elements(void)
+{
+	double temp = val[sp];
+	val[sp] = val[sp--];
+	val[sp] = temp;
+}
+
+/* clear the stack */
+void clear_stack(void)
+{
+	while (sp > 0) {
+		val[--sp] = 0.0;
+	}
 }
 
 #define BUFSIZE	100
