@@ -9,7 +9,11 @@ void push(double);
 double pop(void);
 
 /* Exercise 4-3: Add the modulus (%) operator and provisions for negative
-	numbers */
+	numbers
+
+	TODO: Known issue where input ending on unary minus '-' erroneously
+	returns 0.
+ */
 
 /* reverse Polish calculator */
 int main(int argc, char *argv[])
@@ -67,22 +71,36 @@ int getch(void);
 void ungetch(int);
 
 /* getop: get next operator or numeric operand */
+/* Binary minus operator will be followed by whitespace unary minus operator 
+	will be followed by a digit or period.
+	 */
 int getop(char s[])
 {
-	int i, c;
+	int i, c, d;
 	
 	while ((s[0] = c = getch()) == ' ' || c == '\t')
 		;
 	s[1] = '\0';
 	if (!isdigit(c) && c != '.' && c != '-') {
-		return c;
+		return c;	/* not a number */
+	}
+	if (c == '-') {		/* deal with minus */
+		d = getch();
+		if (d == ' ') {		/* unary minus */
+			return c;
+		} else if (d == EOF) {
+			ungetch(d);
+			return c;
+		} else {
+			ungetch(d);
+		}
 	}
 	i = 0;
-	if (isdigit(c)) {
+	if (isdigit(c) || c == '-') {	/* collect integer part */
 		while (isdigit(s[++i] = c = getch()))
 		;
 	}
-	if (c == '.') {
+	if (c == '.') {		/* collect decimal part */
 		while (isdigit(s[++i] = c = getch()))
 		;
 	}
