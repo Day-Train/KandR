@@ -24,6 +24,10 @@ void clear_stack(void);
 	command to clear the stack.
  */
 
+/* Exercise 4-5: Add access to library functions like sin, exp, and pow.
+	See <math.h> in Appendix B, Section 4.
+ */
+
 /* reverse Polish calculator */
 int main(int argc, char *argv[])
 {
