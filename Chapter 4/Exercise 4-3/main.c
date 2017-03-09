@@ -74,6 +74,11 @@ void clear_stack(void);
 		fmod()	
  */
 
+/* Exercise 4-6: Add commands for handling variables. 
+	Expect twenty-six (26) single-letter variables. Include a variable
+	for the most recently printed value.
+ */
+
 double sin(double);
 double cos(double);
 double tan(double);
