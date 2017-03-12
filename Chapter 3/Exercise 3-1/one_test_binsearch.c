@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/** Exercise 3-1: Our binary search makes two test in the loop, when one would 
+	suffice. Write a version with only one test inside the loop and measure
+	 the difference in runtime.
+ */
+
 int binsearch(int, int[], int);
 
 int main(int argc, char *argv[])
@@ -10,11 +15,6 @@ int main(int argc, char *argv[])
 
         return binsearch(x, v, n);
 }
-
-/* Our binary search makes two test in the loop, when one would suffice.
-	Write a version with only one test inside the loop and measure the
-	difference in runtime.
- */
 
 /* binsearch: find x in v[0] <= v[1] <= ... <= v[n-1] */
 int binsearch(int x, int v[], int n)

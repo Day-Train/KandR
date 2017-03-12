@@ -3,6 +3,44 @@
 #include <string.h>
 #include <math.h>
 
+/** Exercise 4-3: Add the modulus (%) operator and provisions for negative
+        numbers
+
+        TODO: Known issue where input ending on unary minus '-' erroneously
+        returns 0.
+ */
+
+/** Exercise 4-4: Add commands to print the top element of the stack without
+        popping, to duplicate it, and to swap the top two elements. Add a
+        command to clear the stack.
+
+        TODO: Need to actually test this...
+ */
+
+/** Exercise 4-5: Add access to library functions like sin, exp, and pow.
+        See <math.h> in Appendix B, Section 4.
+
+        Need ability to read in library functions from stdin and parse them as
+         operators akin to the unary or binary operators like '+' or '-'.
+        Examples below:
+
+                $x sin
+                >sin(x)
+
+                $x sqrt
+                >sqrt(x)
+
+                $x n ldexp
+                >x*2^n
+
+        TODO: Need to implement the following operations
+                floor()
+                ldexp()
+                frexp()
+                modf()
+                fmod()
+ */
+
 #define MAXOP		100
 #define NUMBER 		'0'
 #define SINE		1024
@@ -35,44 +73,6 @@ void print_element(void);
 void duplicate_element(void);
 void swap_elements(void);
 void clear_stack(void);
-
-/* Exercise 4-3: Add the modulus (%) operator and provisions for negative
-	numbers
-
-	TODO: Known issue where input ending on unary minus '-' erroneously
-	returns 0.
- */
-
-/* Exercise 4-4: Add commands to print the top element of the stack without
-	popping, to duplicate it, and to swap the top two elements. Add a
-	command to clear the stack.
-	
-	TODO: Need to actually test this...
- */
-
-/* Exercise 4-5: Add access to library functions like sin, exp, and pow.
-	See <math.h> in Appendix B, Section 4.
-
-	Need ability to read in library functions from stdin and parse them as
-	 operators akin to the unary or binary operators like '+' or '-'. 
-	Examples below:
-	
-		$x sin
-		>sin(x)
-
-		$x sqrt
-		>sqrt(x)
-
-		$x n ldexp
-		>x*2^n
-
-	TODO: Need to implement the following operations
-		floor()
-		ldexp()
-		frexp()
-		modf()
-		fmod()	
- */
 
 double sin(double);
 double cos(double);

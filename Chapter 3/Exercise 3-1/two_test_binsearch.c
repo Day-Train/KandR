@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+/** Exercise 3-1: Wrte a version with only one test inside the loop and measure
+	the difference in run-time.
+ */
+
 int binsearch(int, int[], int);
 
 int main(int argc, char *argv[])

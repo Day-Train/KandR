@@ -1,6 +1,10 @@
 #include <ctype.h>
 #include <stdio.h>
 
+/** Exercise 4-2: Extend atof to handle scientific notation of the form:
+        123.45e-6
+*/
+
 double atof(char source[]);
 
 /* pass as command line argument string to be returned */
@@ -13,9 +17,6 @@ void main(int argc, char *argv[])
 }
 
 /* atof: convert string s to double */
-/* extend atof to handle scientific notation of the form:
-	123.45e-6
-*/
 double atof(char s[])
 {
 	double val, power;
