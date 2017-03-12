@@ -21,7 +21,10 @@ Exercise 1-13
 Exercise 1-14 TODO  
 Exercise 1-15  
 Exercise 1-16 TODO  
+Exercise 1-19 TODO  
   
+Exercise 2-1 TODO  
+
 Exercise 3-1  
 Exercise 3-2  
 Exercise 3-4 TODO  
