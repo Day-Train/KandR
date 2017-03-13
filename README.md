@@ -34,5 +34,6 @@ Exercise 4-2
 Exercise 4-3  
 Exericse 4-4 See 4-3 Directory  
 Exercise 4-5 See 4-3 Directory  
+Exercise 4-12 TODO  
   
 Exercise 5-1 TODO  
