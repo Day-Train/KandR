@@ -17,7 +17,7 @@ Exercise 1-9
 Exercise 1-10  
 Exercise 1-11  
 Exercise 1-12  
-Exercise 1-13
+Exercise 1-13  
 Exercise 1-14 TODO  
 Exercise 1-15  
 Exercise 1-16 TODO  
@@ -35,6 +35,8 @@ Exercise 4-3
 Exericse 4-4 See 4-3 Directory  
 Exercise 4-5 See 4-3 Directory  
 Exercise 4-12  
-Exercise 4-13 TODO  
+Exercise 4-13  
+Exercise 4-14 TODO  
   
-Exercise 5-1 TODO  
+Exercise 5-1  
+ 
