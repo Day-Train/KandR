@@ -41,6 +41,14 @@
                 fmod()
  */
 
+/*
+	TODO: Needs to be compiled with the correct math headers, otherwise 
+	compiler warning. Workaround to compile with appropriately linked
+	library, example below:
+	
+		gcc -o main.out main.c -lm
+ */
+
 #define MAXOP		100
 #define NUMBER 		'0'
 #define SINE		1024
