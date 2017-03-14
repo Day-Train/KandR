@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 /** Exercise 5-4: Write the function strend(s,t), which returns 1 if the string
 	 t occurs at the end of string s, and zero otherwise.
@@ -8,14 +9,8 @@ int strend(char *, char *);
 
 int main(int argc, char argv[])
 {
-	char stringA[] = "Hello World";
-        char stringB[] = "Hello World";
-
-        char *s;
-        char *t;
-
-        s = &stringA;
-        t = &stringB;
+        char *s = "Hello World";
+        char *t = "ello World";
 
 	printf("%d", strend(s, t));
 
@@ -31,15 +26,19 @@ int strend(char *s, char *t)
 		match = 0;
 	 */
 
+	int i;
+	int t_length = strlen(t);
+	int match = 1;
+
 	while (*s != '\0') {
 		s++;
 	}
 	while (*t != '\0') {
 		t++;
 	}
-	int match = 1;
-	while (match = (*t-- == *s--)) {
-		;
+
+	for (i = 0; i < t_length && match == 1; i++) {
+		match = (*t-- == *s--);
 	}
 	return match;
 }
