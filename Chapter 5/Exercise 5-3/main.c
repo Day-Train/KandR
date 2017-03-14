@@ -13,14 +13,8 @@ void strcat_pointer(char *, char *);
 
 int main(int argc, char argv[]) 
 {
-	char stringA[] = "Hello World";
-	char stringB[] = "How are you today?";
-
-	char *s;
-	char *t;
-
-	s = &stringA;
-	t = &stringB;
+	char s[100] = "Hello World";
+	char t[100] = "How are you today?";
 
 	strcat_pointer(s, t);
 	printf("%s\n", s);
