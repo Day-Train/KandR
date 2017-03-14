@@ -39,4 +39,6 @@ Exercise 4-13
 Exercise 4-14 TODO  
   
 Exercise 5-1  
- 
+Exercise 5-2  
+Exercise 5-3 TODO   
+Exercise 5-4 TODO  
