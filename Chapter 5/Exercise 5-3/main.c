@@ -4,11 +4,6 @@
 	 in Chapter 2: strcat(s,t) copies the string to to the end of s.
  */
 
-/*
-	TODO: Compiler throws warning: assignment from incompatible pointer type
-	on lines 22 & 23.
- */
-
 void strcat_pointer(char *, char *);
 
 int main(int argc, char argv[]) 
